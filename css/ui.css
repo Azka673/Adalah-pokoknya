@@ -1,0 +1,9 @@
+/**
+ * File: css/ui.css
+ * Purpose: Additional UI components (modals, tooltips).
+ */
+
+#player-stats { font-size:13px; color:#e0f2ff; }
+
+.panel-actions { display:flex; gap:8px; margin-top:8px; }
+.count { color:#9bd1ff; font-weight:600; margin-left:6px; }

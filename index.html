@@ -1,0 +1,67 @@
+<!--
+/**
+ * File: index.html
+ * Purpose: Entry point for TerraForge Open World RPG. Loads Three.js and game modules.
+ */
+-->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TerraForge — Open World RPG</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/ui.css" />
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="viewport"></canvas>
+
+    <div id="hud">
+      <div id="topbar">
+        <div id="time">Day 1 • 06:00</div>
+        <div id="weather">Clear</div>
+        <div id="player-stats">HP: <span id="hp">100</span> • XP: <span id="xp">0</span> • LV: <span id="lvl">1</span></div>
+      </div>
+
+      <div id="center-ui">
+        <div id="crosshair">+</div>
+      </div>
+
+      <div id="inventory-panel" class="panel">
+        <div class="panel-title">Inventory</div>
+        <div id="inventory-grid"></div>
+        <div class="panel-actions">
+          <button id="save-btn" class="btn">Save</button>
+          <button id="load-btn" class="btn">Load</button>
+          <button id="clear-btn" class="btn">Reset World</button>
+        </div>
+      </div>
+
+      <div id="toolbar">
+        <div class="slot active" data-block="dirt">Dirt x<span class="count">0</span></div>
+        <div class="slot" data-block="stone">Stone x<span class="count">0</span></div>
+        <div class="slot" data-block="wood">Wood x<span class="count">0</span></div>
+      </div>
+
+      <div id="log" class="panel">
+        <div class="panel-title">Log</div>
+        <div id="log-body"></div>
+      </div>
+
+      <div id="intro" class="panel">
+        <div class="panel-title">TerraForge</div>
+        <div class="panel-body">
+          <p>Klik untuk mulai. WASD bergerak. Mouse melihat. Tombol E gunakan/ambil. Klik kiri untuk menambang, kanan untuk menempatkan.</p>
+          <button id="start-btn" class="btn">Mulai</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js and examples via CDN -->
+  <script type="module">
+    import './js/main.js';
+  </script>
+</body>
+</html>
